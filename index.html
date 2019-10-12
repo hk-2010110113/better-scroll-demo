@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            height: 400px;
+            background-color: pink;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul class="content">
+            <button onclick="dy()">点击</button>
+            <li>1、副经理但是复检</li>
+            <li>2、副经理收到了</li>
+            <li>3、出现了旁边</li>
+            <li>4、剧毒品必须来</li>
+            <li>5、结构的多个</li>
+            <li>6、分配的根本</li>
+            <li>1、副经理但是复检</li>
+            <li>2、副经理收到了</li>
+            <li>3、出现了旁边</li>
+            <li>4、剧毒品必须来</li>
+            <li>5、结构的多个</li>
+            <li>6、分配的根本</li>
+            <li>1、副经理但是复检</li>
+            <li>2、副经理收到了</li>
+            <li>3、出现了旁边</li>
+            <li>4、剧毒品必须来</li>
+            <li>5、结构的多个</li>
+            <li>6、分配的根本</li>
+            <li>1、副经理但是复检</li>
+            <li>2、副经理收到了</li>
+            <li>3、出现了旁边</li>
+            <li>4、剧毒品必须来</li>
+            <li>5、结构的多个</li>
+            <li>6、分配的根本</li>
+            <li>1、副经理但是复检</li>
+            <li>2、副经理收到了</li>
+            <li>3、出现了旁边</li>
+            <li>4、剧毒品必须来</li>
+            <li>5、结构的多个</li>
+            <li>6、分配的根本</li>
+            <li>1、副经理但是复检</li>
+            <li>2、副经理收到了</li>
+            <li>3、出现了旁边</li>
+            <li>4、剧毒品必须来</li>
+            <li>5、结构的多个</li>
+            <li>6、分配的根本</li>
+            <li>1、副经理但是复检</li>
+            <li>2、副经理收到了</li>
+            <li>3、出现了旁边</li>
+            <li>4、剧毒品必须来</li>
+            <li>5、结构的多个</li>
+            <li>6、分配的根本</li>
+            <li>1、副经理但是复检</li>
+            <li>2、副经理收到了</li>
+            <li>3、出现了旁边</li>
+            <li>4、剧毒品必须来</li>
+            <li>5、结构的多个</li>
+            <li>6、分配的根本</li>
+        </ul>
+    </div>
+    <script src="./betterscroll/bscroll.js"></script>
+    <script>
+        const bscroll = new BScroll(document.querySelector('.wrapper'), {
+            probeType: 3,
+            pullUpLoad: true,
+        })
+   
+        // bscroll.on('scroll', (postion) => {
+        //     console.log(postion.y)
+        // })
+
+        //上拉加载更多
+        bscroll.on('pullingUp', () => {
+            //只会打印一次
+            console.log('上拉加载')
+            //请求更多页的数据之后，记得调动finishPullUp方法
+            setTimeout(() => {
+                bscroll.finishPullUp()
+            }, 2000)
+        });
+
+        function dy() {
+            console.log("点击")
+        }
+    </script>
+</body>
+
+</html>
